@@ -2,117 +2,61 @@ import React, { Component } from 'react'
 import NewsItem from './NewsItem'
 
 export class News extends Component {
-    articles = [
-        {
-            "source": {
-                "id": "bbc-sport",
-                "name": "BBC Sport"
-            },
-            "author": null,
-            "title": "Premier League 'bankrolling' European football",
-            "description": "The Premier League is \"almost bankrolling\" European football, with other countries becoming \"feeder leagues\", says pundit Julien Laurens.",
-            "url": "http://www.bbc.co.uk/sport/football/64493480",
-            "urlToImage": "https://ichef.bbci.co.uk/live-experience/cps/624/cpsprodpb/EBC8/production/_128506306_enzofernandez.jpg",
-            "publishedAt": "2023-02-02T23:22:23.7637512Z",
-            "content": "Chelsea spent £288m in the January transfer window, including £107m on Enzo Fernandez. Their total spend was more than that of France, Germany, Italy and Spain combined\r\nThe Premier League is \"almost… [+3309 chars]"
-        },
-        {
-            "source": {
-                "id": "fox-sports",
-                "name": "Fox Sports"
-            },
-            "author": null,
-            "title": "Michigan, USC, Penn State among Joel Klatt's biggest recruiting surprises",
-            "description": "Joel Klatt shares which college football programs surprised him most during National Signing Day, including Michigan, USC, Penn State and more.",
-            "url": "http://www.foxsports.com/stories/college-football/michigan-usc-penn-state-among-klatts-biggest-recruiting-surprises",
-            "urlToImage": "https://a57.foxsports.com/statics.foxsports.com/www.foxsports.com/content/uploads/2023/02/1408/814/2.2.23_Michigan-USC-Penn-State-Among-Joel-Klatt-Biggest-Surprises-In-Recruiting_16x9.jpg?ve=1&tl=1",
-            "publishedAt": "2023-02-02T22:59:04Z",
-            "content": "As college football's\r\n National Signing Day wrapped up Wednesday, it was no surprise to see the likes of Alabama and Georgia sitting atop the 2023 class rankings.\r\nNick Saban and the Crimson Tide ha… [+4373 chars]"
-        },
-        {
-            "source": {
-                "id": "fox-sports",
-                "name": "Fox Sports"
-            },
-            "author": "Ralph Vacchiano",
-            "title": "Eagles on Julian Love's Nick Sirianni comments: \"He just don't understand\"",
-            "description": "Giants safety Julian Love told the hosts of \"Good Morning Football,\" \"You guys could coach this team,\" in regard to the Eagles. Philadelphia players disagreed strongly, backing coach Nick Sirianni.",
-            "url": "http://www.foxsports.com/stories/nfl/eagles-on-julian-loves-nick-sirianni-comments-he-just-dont-understand",
-            "urlToImage": "https://a57.foxsports.com/statics.foxsports.com/www.foxsports.com/content/uploads/2023/02/1408/814/GettyImages-1339877332.jpg?ve=1&tl=1",
-            "publishedAt": "2023-02-02T21:00:26Z",
-            "content": "PHILADELPHIA The criticism of Nick Sirianni is hardly new, and his players have certainly heard it all before. They know some people think the Philadelphia Eagles are so talented they could probably … [+4307 chars]"
-        },
-        {
-            "source": {
-                "id": "bbc-sport",
-                "name": "BBC Sport"
-            },
-            "author": null,
-            "title": "Mason Greenwood attempted rape charges dropped",
-            "description": "The Manchester United footballer was arrested amid allegations surrounding images and videos online.",
-            "url": "http://www.bbc.co.uk/news/uk-england-manchester-64502021",
-            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/139A0/production/_127188208_hi073443971.jpg",
-            "publishedAt": "2023-02-02T14:37:21.6425931Z",
-            "content": "Charges of attempted rape and assault have been dropped against Manchester United footballer Mason Greenwood.\r\nThe 21-year-old was arrested in January last year amid allegations surrounding images an… [+1261 chars]"
-        },
-        {
-            "source": {
-                "id": "bleacher-report",
-                "name": "Bleacher Report"
-            },
-            "author": "Morgan Moriarty",
-            "title": "Biggest Winners and Losers of the 2023 College Football Late Signing Window",
-            "description": "Tuesday, Feb. 1, marked national signing day, as high school prospects across the country signed with their respective college schools. In college football,...",
-            "url": "https://bleacherreport.com/articles/10063839-biggest-winners-and-losers-of-the-2023-college-football-late-signing-window",
-            "urlToImage": "https://media.bleacherreport.com/image/upload/x_24,y_0,w_1771,h_1179,c_crop/c_fill,g_faces,w_3800,h_2000,q_95/v1675290063/qeyt9culgjwisdhyfxtb.jpg",
-            "publishedAt": "2023-02-02T01:22:33Z",
-            "content": "Nick Saban Chris Graythen/Getty Images\r\nSpeaking of Nick Saban, the Alabama head coach told an interesting story regarding a Tide player that had entered the transfer portal. While attending last wee… [+2135 chars]"
-        },
-        {
-            "source": {
-                "id": "bleacher-report",
-                "name": "Bleacher Report"
-            },
-            "author": "Brad Shepard",
-            "title": "National Signing Day 2023: Ranking Top 25 Recruiting Classes After NSD",
-            "description": "Another national signing day has come and gone, and while the Alabama Crimson Tide didn't make it to the College Football Playoff, they did reclaim their perch...",
-            "url": "https://bleacherreport.com/articles/10063202-national-signing-day-2023-ranking-top-25-recruiting-classes-after-nsd",
-            "urlToImage": "https://media.bleacherreport.com/image/upload/c_fill,g_faces,w_3800,h_2000,q_95/v1674847411/jtsk7t6idpizqsv2jfna.jpg",
-            "publishedAt": "2023-02-02T00:02:42Z",
-            "content": "Kevork Djansezian/Getty Images\r\n15. Texas A&amp;M Aggies\r\nClass size:19\r\n1 Thing to Know\r\nAs if last year's haul of defensive line recruits wasn't elite enough, the Aggies added another star this yea… [+2801 chars]"
-        },
-        {
-            "source": {
-                "id": "fox-sports",
-                "name": "Fox Sports"
-            },
-            "author": "Bryan Fischer",
-            "title": "Signing Day Report Card: Colorado, Oregon, Alabama, Texas shine bright",
-            "description": "The college football recruiting cycle for 2023 came to a close with Wednesday's National Signing Day. Here's who aced the test.",
-            "url": "http://www.foxsports.com/stories/college-football/signing-day-report-card-colorado-oregon-alabama-texas-shine-bright",
-            "urlToImage": "https://a57.foxsports.com/statics.foxsports.com/www.foxsports.com/content/uploads/2023/02/1408/814/02.01.23_RecruitingReportCard_Horizontal.jpg?ve=1&tl=1",
-            "publishedAt": "2023-02-01T22:56:00Z",
-            "content": "Twice each year, college football finds a need to dust off the fax machines as recruits across the country send their signatures in to programs with high hopes of making a big impact. Some exceed suc… [+9096 chars]"
+
+    handlePrevious=async()=>{
+
+        let url= `https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=36f50f2b27604799b41f827583fcd0d0&page=${this.state.page - 1}&pagesize=20`
+        let data = await fetch(url);
+        let parseData = await data.json()
+        this.setState({
+            page: this.state.page - 1,
+            articles: parseData.articles
+        })
+    }
+
+    handleNext=async()=>{
+        if(this.state.page + 1>Math.ceil(this.state.totalResults/20)){
+
         }
-    ]
+        else{
+            let url= `https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=36f50f2b27604799b41f827583fcd0d0&page=${this.state.page + 1}&pagesize=20`
+            let data = await fetch(url);
+            let parseData = await data.json()
+            this.setState({
+                page: this.state.page + 1,
+                articles: parseData.articles
+            })
+        }
+    }
+
     constructor(){
         super();
-        console.log('hello this a constroctor from news componetn')
         this.state={
-            articles : this.articles,
-            loading : false
+            articles : [],
+            loading : false,
+            page:1
         }
+    }
+    async componentDidMount(){
+        let url= "https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=36f50f2b27604799b41f827583fcd0d0&page=1&pagesize=20"
+        let data = await fetch(url);
+        let parseData = await data.json()
+        console.log(parseData);
+        this.setState({articles: parseData.articles,  totalResults : parseData.totalResults })
     }
 render() {
     return (
-        <div className='container my-4 '>
+        
+        <div className='container my-4'>
         <h2>NewsMonkey - Top Headlines</h2>
             <div className="row">
             {this.state.articles.map((element)=>{ return <div className="col-md-4 my-3" key={element.url}>
-                    <NewsItem  title= {element.title.slice(0, 44)} description = {element.description.slice(0, 88)} imageUrl={element.urlToImage} newsUrl={element.url} />
+                    <NewsItem  title= {element.title?element.title:""} description = {element.description?element.description:""} imageUrl={element.urlToImage} newsUrl={element.url} />
                 </div> })}
-                
-
+            </div>
+            <div className="container d-flex justify-content-between">
+            <button disabled={this.state.page<=1} type="button" className="btn btn-dark" onClick={this.handlePrevious}>&larr; Previous</button>
+            <button type="button" className="btn btn-dark" onClick={this.handleNext}>Next &rarr;</button>
             </div>
         </div>
     )
